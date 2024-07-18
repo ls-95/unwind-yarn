@@ -1,0 +1,66 @@
+.Signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(240, 128, 128, 0.2);
+}
+
+.SignupContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  margin: 8px;
+}
+
+input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.SignupContent h1 {
+  font-weight: 900;
+}
+
+.SignupContent p {
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.SignupButton {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.5s;
+}
+
+.SignupContent .SignupButton:hover {
+  background-color: rgba(240, 128, 128, 0.7);
+}
+
+.SignupContent a {
+  color: #f08080;
+  text-decoration: none;
+}
+
+.SignupContent a:hover {
+  text-decoration: underline;
+}
