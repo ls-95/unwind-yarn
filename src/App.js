@@ -1,35 +1,27 @@
 import "./App.css";
-import Home from "./Home";
 import Signup from "./Signup";
+import Projects from "./Projects";
+import Yarn from "./Yarn";
+import Homepage from "./Homepage";
 import Login from "./Login";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
   return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/signup">Signup</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
-
-        {/* A <Switch> looks through its children <Route>s and
+    <div>
+      <Router>
+        <div>
+          {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="signup" element={<Signup />} />
-          <Route path="login" element={<Login />} />
-        </Routes>
-      </div>
-    </Router>
+          <Routes>
+            <Route path="/home" element={<Homepage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/yarn" element={<Yarn />} />
+            <Route path="login" element={<Login />} />
+            <Route path="/" element={<Signup />} />
+          </Routes>
+        </div>
+      </Router>
+    </div>
   );
 }
