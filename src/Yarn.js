@@ -1,3 +1,9 @@
+import Navbar from "./Navbar";
+
 export default function Yarn() {
-  return;
+  return (
+    <div className="Yarn">
+      <Navbar />
+    </div>
+  );
 }
