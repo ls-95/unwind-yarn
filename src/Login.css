@@ -1,4 +1,4 @@
-.Signup {
+.Login {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,7 +6,7 @@
   background-color: rgba(240, 128, 128, 0.2);
 }
 
-.SignupContent {
+.LoginContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,16 +28,16 @@ input {
   margin: 8px;
 }
 
-.SignupContent h1 {
+.LoginContent h1 {
   font-weight: 900;
 }
 
-.SignupContent p {
+.LoginContent p {
   margin-top: 20px;
   font-weight: 500;
 }
 
-.SignupButton {
+.LoginButton {
   background-color: #f08080;
   color: white;
   border: none;
@@ -49,15 +49,15 @@ input {
   transition: 0.5s;
 }
 
-.SignupContent .SignupButton:hover {
+.LoginContent .LoginButton:hover {
   background-color: rgba(240, 128, 128, 0.7);
 }
 
-.SignupContent a {
+.LoginContent a {
   color: #f08080;
   text-decoration: none;
 }
 
-.SignupContent a:hover {
+.LoginContent a:hover {
   text-decoration: underline;
 }
