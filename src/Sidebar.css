@@ -1,0 +1,37 @@
+.Sidebar h2 {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.Sidebar img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #f08080;
+  margin-bottom: 50px;
+}
+
+.Sidebar .SidebarPrjoectsSection {
+  padding: 10px 0 40px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.Sidebar .ProjectStatusNumber {
+  text-align: right;
+  opacity: 0.55;
+}
+
+.Sidebar .SidebarLinks {
+  padding-top: 40px;
+}
+
+.Sidebar .Strong {
+  font-weight: bold;
+}
+
+.Sidebar hr {
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 1px solid white;
+}

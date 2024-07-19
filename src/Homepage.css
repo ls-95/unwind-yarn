@@ -1,0 +1,54 @@
+.Homepage {
+  background-color: #fce6e6;
+  height: 100%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.Homepage .container {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  grid-template-rows: 200px 1fr;
+  gap: 25px;
+  padding: 40px 0;
+  max-width: 1200px;
+  height: calc(100vh - 65px);
+  margin: 0 auto;
+}
+
+.SideBarContent {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 40px;
+  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.HomepageHeaderContent {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.HomepageHeaderContent h1 {
+  padding: 20px 0;
+}
+
+.HomepageHeaderContent p {
+  font-family: "Raleway", sans-serif;
+  opacity: 0.55;
+}
+
+.MainHomepageContent {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

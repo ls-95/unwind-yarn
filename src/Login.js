@@ -11,6 +11,18 @@ export default function Login() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(email, password);
+
+    fetch("http://localhost:3001/login", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        alert(response.message);
+      });
     navigate("/home");
   }
 
