@@ -15,6 +15,20 @@ export default function Signup() {
   function handleSubmit(event) {
     event.preventDefault();
     console.log(firstName, lastName, email, password, passwordAgain);
+
+    // TODO: Make login post to API
+    fetch("http://localhost:3001/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        firstName: firstName,
+        lastName: lastName,
+      }),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        alert(response.message);
+      });
+
     navigate("/home");
   }
 
