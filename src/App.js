@@ -4,6 +4,8 @@ import Projects from "./Projects";
 import Yarn from "./Yarn";
 import Homepage from "./Homepage";
 import Login from "./Login";
+import MyProfile from "./MyProfile";
+import Settings from "./Settings";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -19,6 +21,8 @@ export default function App() {
             <Route path="/yarn" element={<Yarn />} />
             <Route path="login" element={<Login />} />
             <Route path="/" element={<Signup />} />
+            <Route path="/myprofile" element={<MyProfile />} />
+            <Route path="/settings" element={<Settings />} />
           </Routes>
         </div>
       </Router>
