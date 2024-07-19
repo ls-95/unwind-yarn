@@ -19,15 +19,23 @@
 
 .Sidebar .ProjectStatusNumber {
   text-align: right;
-  opacity: 0.55;
 }
 
-.Sidebar .SidebarLinks {
+.Sidebar .SidebarLinksSection {
   padding-top: 40px;
 }
 
 .Sidebar .Strong {
   font-weight: bold;
+}
+
+.Sidebar .Link {
+  text-decoration: none;
+  color: #f08080;
+}
+
+.Sidebar .Link:hover {
+  text-decoration: underline;
 }
 
 .Sidebar hr {

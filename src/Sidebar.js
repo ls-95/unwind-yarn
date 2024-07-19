@@ -1,6 +1,6 @@
 import "./Sidebar.css";
-
 import YarnPhoto from "./yarn.jpg";
+import SidebarLinks from "./SidebarLinks";
 
 export default function Sidebar() {
   return (
@@ -28,12 +28,8 @@ export default function Sidebar() {
         </div>
       </div>
       <hr />
-      <div className="SidebarLinks">
-        <p className="Strong">Projects</p>
-        <p className="Strong">Yarn stash</p>
-        <p className="Strong">My profile</p>
-        <p className="Strong">Settings</p>
-        <p className="Strong">Logout</p>
+      <div className="SidebarLinksSection">
+        <SidebarLinks />
       </div>
     </div>
   );
