@@ -11,8 +11,13 @@
   gap: 25px;
   padding: 40px 0;
   max-width: 1200px;
-  height: calc(100vh - 65px);
+
   margin: 0 auto;
+}
+
+.Sidebar img {
+  width: 100%;
+  height: auto;
 }
 
 .SideBarContent {
@@ -22,9 +27,32 @@
   padding: 20px 40px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
 }
 
 .MainProjectsContent {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.DisplayProjects {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.DisplayProjects img {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.DisplayProjects .Left {
+  text-align: left;
+}
+
+.DisplayProjects .Strong {
+  font-weight: bold;
 }
