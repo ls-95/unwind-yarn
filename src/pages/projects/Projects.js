@@ -1,9 +1,22 @@
 import Navbar from "../navbar/Navbar";
 import "./Projects.css";
+import { useState } from "react";
+import { useEffect } from "react";
 import ProjectsSidebar from "./ProjectsSidebar";
-import DisplayProjects from "./DisplayProjects";
+import ProjectsResults from "./ProjectsResults";
 
 export default function Projects() {
+  let [results, setResults] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/projects")
+      .then((res) => res.json())
+      .then((response) => {
+        //console.log(response.data);
+        setResults(response.data);
+      });
+  }, []);
+
   return (
     <div className="Projects">
       <Navbar />
@@ -12,9 +25,7 @@ export default function Projects() {
           <ProjectsSidebar />
         </div>
         <div className="MainProjectsContent">
-          <div className="DisplayProjects">
-            <DisplayProjects />
-          </div>
+          <ProjectsResults results={results} />
         </div>
       </div>
     </div>
