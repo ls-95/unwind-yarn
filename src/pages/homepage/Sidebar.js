@@ -18,7 +18,7 @@ export default function Sidebar() {
           <p className="Strong">Finished projects:</p>
         </div>
         <div className="ProjectStatusNumber">
-          <p>0</p>
+          <p>4</p>
         </div>
         <div className="ProjectStatus">
           <p className="Strong">Future projects:</p>
