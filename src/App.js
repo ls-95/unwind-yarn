@@ -1,9 +1,9 @@
 import "./App.css";
-import Signup from "./Signup";
-import Projects from "./Projects";
+import Signup from "./pages/auth/signup/Signup";
+import Projects from "./pages/projects/Projects";
 import Yarn from "./Yarn";
-import Homepage from "./Homepage";
-import Login from "./Login";
+import Homepage from "./pages/homepage/Homepage";
+import Login from "./pages/auth/login/Login";
 import MyProfile from "./MyProfile";
 import Settings from "./Settings";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";

@@ -14,8 +14,8 @@ export default function SidebarLinks() {
       .then((res) => res.json())
       .then((response) => {
         alert(response.message);
+        navigate("/");
       });
-    navigate("/");
   }
   return (
     <div className="SidebarLinks">
