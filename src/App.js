@@ -1,7 +1,7 @@
 import "./App.css";
 import Signup from "./pages/auth/signup/Signup";
 import Projects from "./pages/projects/Projects";
-import Yarn from "./Yarn";
+import Yarn from "./pages/yarn/Yarn";
 import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/auth/login/Login";
 import MyProfile from "./MyProfile";
