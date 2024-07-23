@@ -16,20 +16,25 @@
 }
 
 .Sidebar .CreateProject {
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
-.CreateProject .Button {
+.CreateProject p {
+  margin-bottom: 20px;
+}
+
+.CreateProject a {
   background-color: #f08080;
   color: white;
   border: none;
   cursor: pointer;
   width: 220px;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 14px;
-  padding: 10px;
+  padding: 10px 20px;
   transition: 0.5s;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .CreateProject .Button:hover {
@@ -97,4 +102,81 @@
 
 .DisplayYarns {
   padding-left: 20px;
+}
+
+.MainProjectFormContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.ProjectForm {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ProjectForm h1 {
+  padding: 20px 0;
+}
+
+.ProjectForm .FormContainer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  padding-bottom: 20px;
+}
+
+.ProjectForm .FormSectionTitles {
+  padding-left: 30px;
+  margin-top: 20px;
+}
+
+.ProjectForm .FormSectionYarnName {
+  padding-bottom: 20px;
+}
+
+.ProjectForm .FormTitles {
+  margin-top: 20px;
+}
+
+.ProjectForm .FormInputText {
+  margin-top: 10px;
+}
+
+.ProjectForm .Left {
+  text-align: left;
+}
+
+.ProjectForm .Strong {
+  font-weight: bold;
+}
+
+.ProjectForm input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.ProjectForm input {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin: 8px;
+}
+
+.ProjectForm .SubmitButton {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  margin-top: 30px;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  margin-bottom: 20px;
+}
+
+.ProjectForm .SubmitButton:hover {
+  background-color: rgba(240, 128, 128, 0.7);
 }
