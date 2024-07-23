@@ -6,6 +6,7 @@ import Homepage from "./pages/homepage/Homepage";
 import Login from "./pages/auth/login/Login";
 import MyProfile from "./MyProfile";
 import Settings from "./Settings";
+import CreateProject from "./pages/projects/CreateProject";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <Route path="/" element={<Signup />} />
             <Route path="/myprofile" element={<MyProfile />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/createproject" element={<CreateProject />} />
           </Routes>
         </div>
       </Router>

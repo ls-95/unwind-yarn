@@ -1,6 +1,7 @@
 import SidebarLinks from "../homepage/SidebarLinks";
 import "./Projects.css";
 import YarnOne from "./yarn1.jpg";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function ProjectsSidebar() {
   return (
@@ -29,8 +30,8 @@ export default function ProjectsSidebar() {
       </div>
       <hr />
       <div className="CreateProject">
-        <p>Add a new project:</p>
-        <button className="Button">Create Project</button>
+        <p className="Strong">Add a new project:</p>
+        <Link to="/createproject">Create Project</Link>
       </div>
       <hr />
       <div className="SidebarLinksSection">

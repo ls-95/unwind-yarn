@@ -8,6 +8,10 @@ export default function DisplayProjectResults(props) {
       <h4>By {props.information.designer}</h4>
       <img src={props.information.image} alt="A soft knitting sweater" />
       <div className="Left">
+        <p>
+          <span className="Strong">Status</span>:{" "}
+          <span className="TextFont">{props.information.status}</span>
+        </p>
         <p className="ProjectText">
           <span className="Strong">Description</span>:{" "}
           <span className="TextFont">{props.information.description}</span>
