@@ -1,27 +1,29 @@
+import DisplayNeedleSizes from "./DisplayNeedleSizes";
+import DisplayYarns from "./DisplayYarns";
+
 export default function DisplayProjectResults(props) {
   return (
     <div className="DisplayProjectResults">
-      <h1>{props.information.name}</h1>
-      <h3>By {props.information.designer}</h3>
+      <h2>{props.information.name}</h2>
+      <h4>By {props.information.designer}</h4>
       <img src={props.information.image} alt="A soft knitting sweater" />
       <div className="Left">
-        <p>
+        <p className="ProjectText">
           <span className="Strong">Description</span>:{" "}
-          {props.information.description}
+          <span className="TextFont">{props.information.description}</span>
         </p>
-        <p>
-          <span className="Strong">Size</span>: {props.information.size}
+        <p className="ProjectText">
+          <span className="Strong">Size</span>:{" "}
+          <span className="TextFont">{props.information.size}</span>
         </p>
-        <p>
-          <span className="Strong">Needles</span>: 5mm, 5.5mm
-        </p>
-        <p className="Strong">Yarn:</p>
-        <ul>
-          <li>Puno, Gepard Garn {"(Colour 520)"}: 550g</li>
-          <li>Silk Mohair, Isager {"(Colour 100)"}: 150g</li>
-          <li>Puno, Gepard Garn {"(Colour 101)"}: 50g</li>
-          <li>Silk Mohair, Isager {"(Colour E0)"}: 25g</li>
-        </ul>
+        <div className="Needles ProjectText">
+          <span className="Strong">Needles</span>:
+          <DisplayNeedleSizes results={props.information} />
+        </div>
+        <div className="Yarns ProjectText">
+          <span className="Strong">Yarn</span>:
+          <DisplayYarns results={props.information} />
+        </div>
       </div>
     </div>
   );

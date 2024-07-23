@@ -15,12 +15,28 @@
   margin: 0 auto;
 }
 
-.Sidebar img {
-  width: 100%;
-  height: auto;
+.Sidebar .CreateProject {
+  padding: 20px 0;
 }
 
-.SideBarContent {
+.CreateProject .Button {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  margin-top: 10px;
+  font-size: 14px;
+  padding: 10px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+
+.CreateProject .Button:hover {
+  background-color: rgba(240, 128, 128, 0.7);
+}
+
+.Projects .SideBarContent {
   grid-column: 1;
   background-color: white;
   border-radius: 8px;
@@ -36,6 +52,10 @@
   gap: 25px;
 }
 
+.TextFont {
+  font-family: "Raleway", sans-serif;
+}
+
 .DisplayProjects {
   background-color: white;
   border-radius: 8px;
@@ -43,10 +63,24 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.DisplayProjects h2 {
+  padding: 20px 0 5px 0;
+}
+
+.DisplayProjects h4 {
+  padding-bottom: 20px;
+}
+
 .DisplayProjects img {
-  width: 50%;
+  width: 60%;
   height: auto;
   border-radius: 50%;
+  margin: 20px;
+  border: 5px solid #fce6e6;
+}
+
+.DisplayProjects .ProjectText {
+  padding-bottom: 10px;
 }
 
 .DisplayProjects .Left {
@@ -55,4 +89,12 @@
 
 .DisplayProjects .Strong {
   font-weight: bold;
+}
+
+.DisplayNeedleSizes {
+  padding-left: 20px;
+}
+
+.DisplayYarns {
+  padding-left: 20px;
 }

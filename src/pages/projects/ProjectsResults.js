@@ -2,7 +2,7 @@ import "./Projects.css";
 import DisplayProjectResults from "./DisplayProjectResults";
 
 export default function ProjectsResults(props) {
-  console.log(props.results);
+  //console.log(props.results);
 
   return props.results.map(function (information, index) {
     return (

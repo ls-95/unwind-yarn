@@ -25,6 +25,10 @@
   padding-top: 40px;
 }
 
+.TextFont {
+  font-family: "Raleway", sans-serif;
+}
+
 .Sidebar .Strong {
   font-weight: bold;
 }
