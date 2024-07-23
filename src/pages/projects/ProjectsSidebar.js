@@ -1,5 +1,5 @@
 import SidebarLinks from "../homepage/SidebarLinks";
-import "../homepage/Sidebar.css";
+import "./Projects.css";
 import YarnOne from "./yarn1.jpg";
 
 export default function ProjectsSidebar() {
@@ -12,20 +12,25 @@ export default function ProjectsSidebar() {
           <p className="Strong">Current WIP's:</p>
         </div>
         <div className="ProjectStatusNumber">
-          <p>0</p>
+          <p className="TextFont">0</p>
         </div>
         <div className="ProjectStatus">
           <p className="Strong">Finished projects:</p>
         </div>
         <div className="ProjectStatusNumber">
-          <p>4</p>
+          <p className="TextFont">4</p>
         </div>
         <div className="ProjectStatus">
           <p className="Strong">Future projects:</p>
         </div>
         <div className="ProjectStatusNumber">
-          <p>0</p>
+          <p className="TextFont">0</p>
         </div>
+      </div>
+      <hr />
+      <div className="CreateProject">
+        <p>Add a new project:</p>
+        <button className="Button">Create Project</button>
       </div>
       <hr />
       <div className="SidebarLinksSection">
