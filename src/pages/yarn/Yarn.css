@@ -25,6 +25,32 @@
   margin-bottom: 25px;
 }
 
+.Sidebar .AddYarn {
+  padding: 40px 0;
+}
+
+.AddYarn p {
+  margin-bottom: 20px;
+}
+
+.AddYarn a {
+  background-color: #f08080;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  margin-top: 20px;
+  font-size: 14px;
+  padding: 10px 20px;
+  transition: 0.5s;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.AddYarn .Button:hover {
+  background-color: rgba(240, 128, 128, 0.7);
+}
+
 .MainYarnContent {
   display: grid;
   grid-template-columns: 1fr 1fr;

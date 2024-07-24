@@ -1,14 +1,16 @@
 import SidebarLinks from "../homepage/SidebarLinks";
+import YarnStash from "./yarnstash.png";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./Yarn.css";
 
 export default function ProjectsSidebar() {
   return (
     <div className="Sidebar">
       <h2>Laetitia's Yarn Stash</h2>
-
+      <img src={YarnStash} alt="A shelf filled with colourful yarn" />
       <div className="SidebarPrjoectsSection">
         <div className="ProjectStatus">
-          <p className="Strong">Yarn quantity:</p>
+          <p className="Strong">Yarn in stash:</p>
         </div>
         <div className="ProjectStatusNumber">
           <p className="TextFont">9</p>
@@ -27,7 +29,10 @@ export default function ProjectsSidebar() {
         </div>
       </div>
       <hr />
-      <div className="CreateProject"></div>
+      <div className="AddYarn">
+        <p className="Strong">Add yarn to your stash:</p>
+        <Link to="/addyarn">Add yarn</Link>
+      </div>
       <hr />
       <div className="SidebarLinksSection">
         <SidebarLinks />

@@ -7,6 +7,7 @@ import Login from "./pages/auth/login/Login";
 import MyProfile from "./MyProfile";
 import Settings from "./Settings";
 import CreateProject from "./pages/projects/CreateProject";
+import AddYarn from "./pages/yarn/AddYarn";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
             <Route path="/myprofile" element={<MyProfile />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/createproject" element={<CreateProject />} />
+            <Route path="/addyarn" element={<AddYarn />} />
           </Routes>
         </div>
       </Router>
