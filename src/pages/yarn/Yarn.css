@@ -27,7 +27,7 @@
 
 .MainYarnContent {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
@@ -35,29 +35,46 @@
   font-family: "Raleway", sans-serif;
 }
 
-.DisplayYarns {
+.DisplayYarn {
   background-color: white;
   border-radius: 8px;
   padding: 20px 40px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.DisplayYarns h2 {
+.DisplayYarn h2 {
   padding: 20px 0 5px 0;
 }
 
-.DisplayYarns h4 {
+.DisplayYarn h4 {
   padding-bottom: 20px;
 }
 
-.DisplayYarns .ProjectText {
+.DisplayYarn img {
+  width: 60%;
+  height: auto;
+  border-radius: 50%;
+  border: 5px solid #fce6e6;
+  margin: 20px 0;
+  transition: transform 0.3s;
+}
+
+.DisplayYarn img:hover {
+  transform: scale(1.5);
+}
+
+.DisplayYarn .ProjectText {
   padding-bottom: 10px;
 }
 
-.DisplayYarns .Left {
+.DisplayYarn .Left {
   text-align: left;
 }
 
-.DisplayYarns .Strong {
+.DisplayYarn .Strong {
   font-weight: bold;
+}
+
+.DisplayYarn .YarnMaterials {
+  padding-left: 20px;
 }

@@ -82,6 +82,11 @@
   border-radius: 50%;
   margin: 20px;
   border: 5px solid #fce6e6;
+  transition: transform 0.3s;
+}
+
+.DisplayProjects img:hover {
+  transform: scale(1.5);
 }
 
 .DisplayProjects .ProjectText {
