@@ -1,5 +1,4 @@
 export default function YarnComposition(props) {
-  console.log(props.info);
   return props.info.composition.map(function (material, index) {
     return (
       <div key={index} className="YarnMaterials">
