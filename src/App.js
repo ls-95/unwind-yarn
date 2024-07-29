@@ -8,6 +8,7 @@ import MyProfile from "./pages/profile/MyProfile";
 import Settings from "./pages/settings/Settings";
 import CreateProject from "./pages/projects/CreateProject";
 import AddYarn from "./pages/yarn/AddYarn";
+import EditProfile from "./pages/profile/EditProfile";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/settings" element={<Settings />} />
             <Route path="/createproject" element={<CreateProject />} />
             <Route path="/addyarn" element={<AddYarn />} />
+            <Route path="/editprofile" element={<EditProfile />} />
           </Routes>
         </div>
       </Router>
