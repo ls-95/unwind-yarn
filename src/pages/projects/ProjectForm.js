@@ -2,6 +2,8 @@ import ProjectYarnForm from "./ProjectYarnForm";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import WidePinkButton from "../../components/atoms/buttons/WidePinkButton";
+import FormInput from "../../components/atoms/inputs/FormInput";
 
 export default function ProjectForm() {
   const navigate = useNavigate();
@@ -35,10 +37,9 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input
-              {...register("name")}
-              type="text"
+            <FormInput
               placeholder="ex. Marseille Sweater"
+              register={{ ...register("name") }}
             />
           </div>
 
@@ -48,10 +49,9 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input
-              type="text"
+            <FormInput
               placeholder="ex. PetiteKnit"
-              {...register("designer")}
+              register={{ ...register("designer") }}
             />
           </div>
 
@@ -61,10 +61,9 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input
-              type="text"
+            <FormInput
               placeholder="ex. Finished, WIP, Future"
-              {...register("status")}
+              register={{ ...register("status") }}
             />
           </div>
 
@@ -74,10 +73,9 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input
-              type="text"
+            <FormInput
               placeholder="Project description"
-              {...register("description")}
+              register={{ ...register("description") }}
             />
           </div>
 
@@ -87,7 +85,7 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input type="text" placeholder="ex. M" {...register("size")} />
+            <FormInput placeholder="ex. M" register={{ ...register("size") }} />
           </div>
 
           <div className="FormTitles">
@@ -96,20 +94,14 @@ export default function ProjectForm() {
             </label>
           </div>
           <div className="FormInputText">
-            <input
-              type="text"
+            <FormInput
               placeholder="ex. 5mm, 3mm"
-              {...register("needles")}
+              register={{ ...register("needles") }}
             />
           </div>
         </div>
         <ProjectYarnForm registerField={register} />
-        <input
-          type="submit"
-          value="Submit"
-          className="SubmitButton"
-          disabled={isDisabled}
-        />
+        <WidePinkButton type="submit" value="Submit" disabled={isDisabled} />
       </form>
     </div>
   );

@@ -1,7 +1,9 @@
 import "./Login.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import LinkElement from "../../../components/atoms/buttons/LinkElement";
+import Input from "../../../components/atoms/inputs/Input";
+import WidePinkButton from "../../../components/atoms/buttons/WidePinkButton";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -39,21 +41,15 @@ export default function Login() {
       <form onSubmit={handleSubmit}>
         <div className="LoginContent">
           <h1>Login</h1>
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            onChange={handleEmail}
-          />
-          <input
+          <Input type="email" placeholder="Email" change={handleEmail} />
+          <Input
             type="password"
             placeholder="Password"
-            required
-            onChange={handlePassword}
+            change={handlePassword}
           />
-          <input type="submit" value="Login" className="LoginButton" />
+          <WidePinkButton type="submit" value="Login" />
           <p>
-            Don't have an account? <Link to="/">Signup</Link>
+            Don't have an account? <LinkElement to="/" value="Signup" />
           </p>
         </div>
       </form>

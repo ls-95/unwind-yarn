@@ -1,8 +1,10 @@
 import "./Signup.css";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import React, { useState } from "react";
 import PasswordChecklist from "react-password-checklist";
 import { useNavigate } from "react-router-dom";
+import Input from "../../../components/atoms/inputs/Input";
+import WidePinkButton from "../../../components/atoms/buttons/WidePinkButton";
+import LinkElement from "../../../components/atoms/buttons/LinkElement";
 
 export default function Signup() {
   const [password, setPassword] = useState("");
@@ -16,7 +18,6 @@ export default function Signup() {
     event.preventDefault();
     console.log(firstName, lastName, email, password, passwordAgain);
 
-    // TODO: Make login post to API
     fetch("http://localhost:3001/signup", {
       method: "POST",
       body: JSON.stringify({
@@ -49,35 +50,22 @@ export default function Signup() {
       <form onSubmit={handleSubmit}>
         <div className="SignupContent">
           <h1>Signup</h1>
-          <input
+          <Input
             type="text"
             placeholder="First name"
-            required
-            onChange={handleFirstName}
+            change={handleFirstName}
           />
-          <input
-            type="text"
-            placeholder="Last name"
-            required
-            onChange={handleLastName}
-          />
-          <input
-            type="email"
-            placeholder="Email"
-            required
-            onChange={handleEmail}
-          />
-          <input
+          <Input type="text" placeholder="Last name" change={handleLastName} />
+          <Input type="email" placeholder="Email" change={handleEmail} />
+          <Input
             type="password"
             placeholder="Create password"
-            onChange={(e) => setPassword(e.target.value)}
-            required
+            change={(e) => setPassword(e.target.value)}
           />
-          <input
+          <Input
             type="password"
             placeholder="Confirm password"
-            onChange={(e) => setPasswordAgain(e.target.value)}
-            required
+            change={(e) => setPasswordAgain(e.target.value)}
           />
           <PasswordChecklist
             rules={["minLength", "specialChar", "number", "capital", "match"]}
@@ -85,9 +73,9 @@ export default function Signup() {
             value={password}
             valueAgain={passwordAgain}
           />
-          <input type="submit" value="Signup" className="SignupButton" />
+          <WidePinkButton type="submit" value="Signup" />
           <p>
-            Already have an account? <Link to="/login">Login</Link>
+            Already have an account? <LinkElement to="/login" value="Login" />
           </p>
         </div>
       </form>

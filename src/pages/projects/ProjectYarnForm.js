@@ -1,3 +1,5 @@
+import FormInput from "../../components/atoms/inputs/FormInput";
+
 export default function ProjectYarnForm({ registerField }) {
   return (
     <div className="FormSection Left">
@@ -9,40 +11,36 @@ export default function ProjectYarnForm({ registerField }) {
           <label>Name:</label>
         </div>
         <div className="FormInputText">
-          <input
-            {...registerField("yarn.name")}
-            type="text"
+          <FormInput
             placeholder="ex. Double Sunday"
+            register={{ ...registerField("yarn.name") }}
           />
         </div>
         <div className="FormSectionTitles">
           <label>Brand:</label>
         </div>
         <div className="FormInputText">
-          <input
-            type="text"
+          <FormInput
             placeholder="ex. Sandnes Garn"
-            {...registerField("yarn.brand")}
+            register={{ ...registerField("yarn.brand") }}
           />
         </div>
         <div className="FormSectionTitles">
           <label>Colour Code:</label>
         </div>
         <div className="FormInputText">
-          <input
-            type="text"
+          <FormInput
             placeholder="ex. 1001"
-            {...registerField("yarn.colour")}
+            register={{ ...registerField("yarn.colour") }}
           />
         </div>
         <div className="FormSectionTitles">
           <label>Quantity:</label>
         </div>
         <div className="FormInputText">
-          <input
-            type="text"
+          <FormInput
             placeholder="ex. 500g"
-            {...registerField("yarn.quantity")}
+            register={{ ...registerField("yarn.quantity") }}
           />
         </div>
       </div>

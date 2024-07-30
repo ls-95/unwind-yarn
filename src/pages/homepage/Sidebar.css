@@ -33,15 +33,6 @@
   font-weight: bold;
 }
 
-.Sidebar .Link {
-  text-decoration: none;
-  color: #f08080;
-}
-
-.Sidebar .Link:hover {
-  text-decoration: underline;
-}
-
 .Sidebar hr {
   height: 3px;
   background-color: rgba(0, 0, 0, 0.2);
