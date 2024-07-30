@@ -1,6 +1,6 @@
 import SidebarLinks from "../homepage/SidebarLinks";
 import YarnStash from "./yarnstash.png";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import AddButton from "../../components/atoms/buttons/AddButton";
 import "./Yarn.css";
 
 export default function ProjectsSidebar() {
@@ -31,7 +31,7 @@ export default function ProjectsSidebar() {
       <hr />
       <div className="AddYarn">
         <p className="Strong">Add yarn to your stash:</p>
-        <Link to="/addyarn">Add yarn</Link>
+        <AddButton to="/addyarn" value="Add yarn" />
       </div>
       <hr />
       <div className="SidebarLinksSection">

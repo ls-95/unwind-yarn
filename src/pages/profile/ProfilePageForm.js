@@ -1,11 +1,8 @@
-import ProjectYarnForm from "./ProjectYarnForm";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import WidePinkButton from "../../components/atoms/buttons/WidePinkButton";
-import FormInput from "../../components/atoms/inputs/FormInput";
 
-export default function ProjectForm() {
+export default function ProfilePageForm() {
   const navigate = useNavigate();
   const [isDisabled, setIsDisabled] = useState(false);
 
@@ -14,94 +11,82 @@ export default function ProjectForm() {
   const onSubmit = (data) => {
     console.log(data);
     setIsDisabled(true);
-    fetch("http://localhost:3001/projects", {
+    fetch("http://localhost:3001/profile", {
       method: "POST",
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
       .then((response) => {
         alert(response.message);
-        navigate("/projects");
+        navigate("/myprofile");
         setIsDisabled(false);
       });
   };
-
   return (
     <div className="ProjectForm">
-      <h1>Create a project</h1>
+      <h1>Edit your profile</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="Left FormContainer">
           <div className="FormTitles">
             <label>
-              <span className="Strong">Name</span>:
+              <span className="Strong">First name</span>:
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput
-              placeholder="ex. Marseille Sweater"
-              register={{ ...register("name") }}
-            />
+            <input type="text" {...register("firstName")} />
           </div>
 
           <div className="FormTitles">
             <label>
-              <span className="Strong">Designer</span>:
+              <span className="Strong">Last name</span>:
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput
-              placeholder="ex. PetiteKnit"
-              register={{ ...register("designer") }}
-            />
+            <input type="text" {...register("lastName")} />
           </div>
 
           <div className="FormTitles">
             <label>
-              <span className="Strong">Status</span>:{" "}
+              <span className="Strong">Email</span>:{" "}
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput
-              placeholder="ex. Finished, WIP, Future"
-              register={{ ...register("status") }}
-            />
+            <input type="text" {...register("email")} />
           </div>
 
           <div className="FormTitles">
             <label>
-              <span className="Strong">Description</span>:{" "}
+              <span className="Strong">Telephone</span>:{" "}
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput
-              placeholder="Project description"
-              register={{ ...register("description") }}
-            />
+            <input type="text" {...register("telephone")} />
           </div>
 
           <div className="FormTitles">
             <label>
-              <span className="Strong">Size</span>:{" "}
+              <span className="Strong">Birthday</span>:{" "}
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput placeholder="ex. M" register={{ ...register("size") }} />
+            <input type="text" {...register("birthday")} />
           </div>
 
           <div className="FormTitles">
             <label>
-              <span className="Strong">Needles</span>:
+              <span className="Strong">Bio</span>:
             </label>
           </div>
           <div className="FormInputText">
-            <FormInput
-              placeholder="ex. 5mm, 3mm"
-              register={{ ...register("needles") }}
-            />
+            <input type="text" {...register("bio")} />
           </div>
         </div>
-        <ProjectYarnForm registerField={register} />
-        <WidePinkButton type="submit" value="Submit" disabled={isDisabled} />
+        <input
+          type="submit"
+          value="Submit"
+          className="SubmitButton"
+          disabled={isDisabled}
+        />
       </form>
     </div>
   );

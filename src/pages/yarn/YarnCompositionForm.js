@@ -1,3 +1,5 @@
+import FormInput from "../../components/atoms/inputs/FormInput";
+
 export default function YarnCompositionForm({ registerField }) {
   return (
     <div className="FormSection Left">
@@ -9,20 +11,18 @@ export default function YarnCompositionForm({ registerField }) {
           <label>Material:</label>
         </div>
         <div className="FormInputText">
-          <input
-            {...registerField("composition.material")}
-            type="text"
-            placeholder="ex. mohair"
+          <FormInput
+            placeholder="ex. Mohair"
+            register={{ ...registerField("composition.material") }}
           />
         </div>
         <div className="FormSectionTitles">
           <label>Pourcentage:</label>
         </div>
         <div className="FormInputText">
-          <input
-            type="text"
+          <FormInput
             placeholder="ex. 77%"
-            {...registerField("composition.pourcentage")}
+            register={{ ...registerField("composition.pourcentage") }}
           />
         </div>
       </div>
