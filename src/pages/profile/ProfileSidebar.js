@@ -1,33 +1,39 @@
 import SidebarLinks from "../homepage/SidebarLinks";
 import ProfilePhoto from "./profilephoto.jpg";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./MyProfile.css";
+import SubHeading from "../../components/atoms/text/SubHeading";
+import BoldText from "../../components/atoms/text/BoldText";
+import AddButton from "../../components/atoms/buttons/AddButton";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import ThermaticBreak from "../../components/atoms/text/ThermaticBreak";
 
 export default function YarnSidebar() {
   return (
     <div className="Sidebar">
-      <h2>Laetitia's Profile</h2>
-      <img src={ProfilePhoto} alt="profile image" />
+      <SubHeading>Laetitia's Profile</SubHeading>
+      <img src={ProfilePhoto} alt="profile" />
       <div className="SidebarPrjoectsSection">
         <div className="ProjectStatus">
-          <p className="Strong">Projects:</p>
+          <BoldText>Projects:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">4</p>
+          <ParagraphText>4</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Yarn:</p>
+          <BoldText>Yarn:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">9</p>
+          <ParagraphText>9</ParagraphText>
         </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="AddYarn">
-        <p className="Strong">Edit your profile:</p>
-        <Link to="/editprofile">Edit</Link>
+        <BoldText>Edit your profile:</BoldText>
+        <div className="ButtonCreateProject">
+          <AddButton to="/editprofile" value="Edit" />
+        </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="SidebarLinksSection">
         <SidebarLinks />
       </div>

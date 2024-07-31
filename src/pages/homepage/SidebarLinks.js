@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import LinkElement from "../../components/atoms/buttons/LinkElement";
+import BoldText from "../../components/atoms/text/BoldText";
 
 export default function SidebarLinks() {
   const navigate = useNavigate();
@@ -19,21 +20,31 @@ export default function SidebarLinks() {
   }
   return (
     <div className="SidebarLinks">
-      <p className="Strong">
-        <LinkElement to="/projects" value="Projects" />
-      </p>
-      <p className="Strong">
-        <LinkElement to="/yarn" value="Yarn stash" />
-      </p>
-      <p className="Strong">
-        <LinkElement to="/myprofile" value="My profile" />
-      </p>
-      <p className="Strong">
-        <LinkElement to="/settings" value="Settings" />
-      </p>
-      <p className="Strong">
-        <LinkElement to="/" value="Logout" change={handleLogout} />
-      </p>
+      <div>
+        <BoldText>
+          <LinkElement to="/projects" value="Projects" />
+        </BoldText>
+      </div>
+      <div>
+        <BoldText>
+          <LinkElement to="/yarn" value="Yarn stash" />
+        </BoldText>
+      </div>
+      <div>
+        <BoldText>
+          <LinkElement to="/myprofile" value="My profile" />
+        </BoldText>
+      </div>
+      <div>
+        <BoldText>
+          <LinkElement to="/settings" value="Settings" />
+        </BoldText>
+      </div>
+      <div>
+        <BoldText>
+          <LinkElement to="/" value="Logout" change={handleLogout} />
+        </BoldText>
+      </div>
     </div>
   );
 }

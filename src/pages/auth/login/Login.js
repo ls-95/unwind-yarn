@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import LinkElement from "../../../components/atoms/buttons/LinkElement";
 import Input from "../../../components/atoms/inputs/Input";
 import WidePinkButton from "../../../components/atoms/buttons/WidePinkButton";
+import MainHeader from "../../../components/atoms/text/MainHeader";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -40,7 +41,7 @@ export default function Login() {
     <div className="Login">
       <form onSubmit={handleSubmit}>
         <div className="LoginContent">
-          <h1>Login</h1>
+          <MainHeader>Login</MainHeader>
           <Input type="email" placeholder="Email" change={handleEmail} />
           <Input
             type="password"

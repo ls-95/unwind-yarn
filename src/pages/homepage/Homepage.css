@@ -35,14 +35,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.HomepageHeaderContent h1 {
-  padding: 20px 0;
-}
-
-.HomepageHeaderContent p {
-  font-family: "Raleway", sans-serif;
-}
-
 .MainHomepageContent {
   grid-column: 2;
   grid-row: 2;

@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import WidePinkButton from "../../components/atoms/buttons/WidePinkButton";
 import FormInput from "../../components/atoms/inputs/FormInput";
+import BoldText from "../../components/atoms/text/BoldText";
+import MainHeader from "../../components/atoms/text/MainHeader";
+import MarginTopDiv from "../../components/atoms/text/MarginTopDiv";
 
 export default function ProjectForm() {
   const navigate = useNavigate();
@@ -28,25 +31,25 @@ export default function ProjectForm() {
 
   return (
     <div className="ProjectForm">
-      <h1>Add yarn to your stash</h1>
+      <MainHeader>Add yarn to your stash</MainHeader>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="Left FormContainer">
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Status</span>:
+              <BoldText>Status</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. In stash, Used, Wish list"
               register={{ ...register("status") }}
             />
           </div>
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Name</span>:
+              <BoldText>Name</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. Ballerina Chunky Mohair"
@@ -54,11 +57,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Brand</span>:
+              <BoldText>Brand</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex.Sandnes Garn"
@@ -66,11 +69,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Colour</span>:{" "}
+              <BoldText>Colour</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. 9004"
@@ -78,11 +81,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Length</span>:{" "}
+              <BoldText>Length</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. 135m"
@@ -90,11 +93,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Weight</span>:{" "}
+              <BoldText>Weight</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. 50g"
@@ -102,11 +105,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Needle sizes</span>:
+              <BoldText>Needle sizes</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. 5-7mm"

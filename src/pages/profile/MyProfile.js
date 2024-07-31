@@ -17,7 +17,7 @@ export default function MyProfile() {
       });
   }, []);
 
-  if (results == undefined) {
+  if (results === undefined) {
     return null;
   }
 

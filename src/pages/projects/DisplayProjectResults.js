@@ -1,34 +1,40 @@
 import DisplayNeedleSizes from "./DisplayNeedleSizes";
 import DisplayYarns from "./DisplayYarns";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import BoldText from "../../components/atoms/text/BoldText";
+import SubHeading from "../../components/atoms/text/SubHeading";
+import SmallHeading from "../../components/atoms/text/SmallHeading";
+import LeftText from "../../components/atoms/text/LeftText";
+import MarginTopDiv from "../../components/atoms/text/MarginTopDiv";
 
 export default function DisplayProjectResults(props) {
   return (
     <div className="DisplayProjectResults">
-      <h2>{props.information.name}</h2>
-      <h4>By {props.information.designer}</h4>
+      <SubHeading>{props.information.name}</SubHeading>
+      <SmallHeading>By {props.information.designer}</SmallHeading>
       <img src={props.information.image} alt="A soft knitting sweater" />
-      <div className="Left">
+      <LeftText>
         <p>
-          <span className="Strong">Status</span>:{" "}
-          <span className="TextFont">{props.information.status}</span>
+          <BoldText>Status</BoldText>:{" "}
+          <ParagraphText>{props.information.status}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Description</span>:{" "}
-          <span className="TextFont">{props.information.description}</span>
+        <p>
+          <BoldText>Description</BoldText>:{" "}
+          <ParagraphText>{props.information.description}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Size</span>:{" "}
-          <span className="TextFont">{props.information.size}</span>
+        <p>
+          <BoldText>Size</BoldText>:{" "}
+          <ParagraphText>{props.information.size}</ParagraphText>
         </p>
-        <div className="Needles ProjectText">
-          <span className="Strong">Needles</span>:
+        <p className="Needles">
+          <BoldText>Needles</BoldText>:
           <DisplayNeedleSizes results={props.information} />
-        </div>
-        <div className="Yarns ProjectText">
-          <span className="Strong">Yarn</span>:
+        </p>
+        <p className="Yarns">
+          <BoldText>Yarn</BoldText>:
           <DisplayYarns results={props.information} />
-        </div>
-      </div>
+        </p>
+      </LeftText>
     </div>
   );
 }

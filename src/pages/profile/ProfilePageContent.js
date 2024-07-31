@@ -1,3 +1,9 @@
+import MainHeader from "../../components/atoms/text/MainHeader";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import BoldText from "../../components/atoms/text/BoldText";
+import ThermaticBreak from "../../components/atoms/text/ThermaticBreak";
+import MarginTopDiv from "../../components/atoms/text/MarginTopDiv";
+
 export default function ProfilePageContent(props) {
   const day = props.results.birthday.day;
   const month = props.results.birthday.month;
@@ -5,61 +11,61 @@ export default function ProfilePageContent(props) {
 
   return (
     <div className="ProfilePageContent">
-      <h1>My profile</h1>
+      <MainHeader>My profile</MainHeader>
       <div className="ProfilePageMainContent">
-        <div className="ProfileText">
-          <p className="Strong">First name:</p>
-        </div>
-        <div className="ProfileText">
-          <p className="TextFont">{props.results.firstName}</p>
-        </div>
-        <div className="ProfileText">
-          <p className="Strong">Last name:</p>
-        </div>
-        <div className="ProfileText">
-          <p className="TextFont">{props.results.lastName}</p>
-        </div>
-        <div className="ProfileText">
-          <p className="Strong">Email:</p>
-        </div>
-        <div className="ProfileText">
-          <p className="TextFont">{props.results.email}</p>
-        </div>
-        <div className="ProfileText">
-          <p className="Strong">Mobile:</p>
-        </div>
-        <div className="ProfileText">
-          <p className="TextFont">{props.results.telephone}</p>
-        </div>
-        <div className="ProfileText">
-          <p className="Strong">Birthday</p>
-        </div>
-        <div className="ProfileText">
-          <p className="TextFont">
+        <MarginTopDiv>
+          <BoldText>First name:</BoldText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <ParagraphText>{props.results.firstName}</ParagraphText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <BoldText>Last name:</BoldText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <ParagraphText>{props.results.lastName}</ParagraphText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <BoldText>Email:</BoldText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <ParagraphText>{props.results.email}</ParagraphText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <BoldText>Mobile:</BoldText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <ParagraphText>{props.results.telephone}</ParagraphText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <BoldText>Birthday</BoldText>
+        </MarginTopDiv>
+        <MarginTopDiv>
+          <ParagraphText>
             {day}th {month}, {year}
-          </p>
-        </div>
+          </ParagraphText>
+        </MarginTopDiv>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="ProfilePageTextContent TextFont">
-        <p className="ProfileText">
+        <ParagraphText>
           Welcome to your profile page! This section of the website is designed
           to provide you with a comprehensive overview of all your personal
           information. Here, you can view details such as your name, contact
           information, and other relevant data you have provided.
-        </p>
-        <p className="ProfileText">
+        </ParagraphText>
+        <ParagraphText>
           If you need to update, change, or add any information, you can easily
           do so by using the sidebar. Simply click the "edit" button located
           there, and you will be able to make the necessary adjustments. This
           ensures that your profile is always up to date with the most accurate
           information.
-        </p>
-        <p className="ProfileText">
+        </ParagraphText>
+        <ParagraphText>
           Should you have any questions or need assistance, please feel free to
           reach out to our support team. We are here to help you make the most
           of your profile page experience.
-        </p>
+        </ParagraphText>
       </div>
     </div>
   );

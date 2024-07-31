@@ -1,5 +1,4 @@
 import FormInput from "../../components/atoms/inputs/FormInput";
-
 export default function ProjectYarnForm({ registerField }) {
   return (
     <div className="FormSection Left">

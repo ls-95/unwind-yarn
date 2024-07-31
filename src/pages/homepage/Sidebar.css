@@ -1,8 +1,3 @@
-.Sidebar h2 {
-  padding: 20px 0;
-  text-align: center;
-}
-
 .Sidebar img {
   width: 100%;
   height: auto;
@@ -23,18 +18,4 @@
 
 .Sidebar .SidebarLinksSection {
   padding-top: 40px;
-}
-
-.TextFont {
-  font-family: "Raleway", sans-serif;
-}
-
-.Sidebar .Strong {
-  font-weight: bold;
-}
-
-.Sidebar hr {
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid white;
 }

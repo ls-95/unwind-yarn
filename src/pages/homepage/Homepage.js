@@ -2,6 +2,8 @@ import Navbar from "../navbar/Navbar";
 import "./Homepage.css";
 import Sidebar from "./Sidebar";
 import MainHomepageContent from "./MainHomepageContent";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import MainHeader from "../../components/atoms/text/MainHeader";
 
 export default function Homepage() {
   return (
@@ -12,12 +14,12 @@ export default function Homepage() {
           <Sidebar />
         </div>
         <div className="HomepageHeaderContent">
-          <h1>Welcome to Unwind Yarn!</h1>
+          <MainHeader>Welcome to Unwind Yarn!</MainHeader>
           <p>
-            Your personal online knitting journal! We're thrilled to have you
-            here. Unwind Yarn is designed to help you keep track of your
-            current, past, and future knitting projects, all in one convenient
-            place!
+            <ParagraphText>
+              Unwind Yarn is designed to help you keep track of your current,
+              past, and future knitting projects, all in one convenient place!
+            </ParagraphText>
           </p>
         </div>
         <div className="MainHomepageContent">

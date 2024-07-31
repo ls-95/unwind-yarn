@@ -4,6 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import WidePinkButton from "../../components/atoms/buttons/WidePinkButton";
 import FormInput from "../../components/atoms/inputs/FormInput";
+import MainHeading from "../../components/atoms/text/MainHeader";
+import BoldText from "../../components/atoms/text/BoldText";
+import MarginTopDiv from "../../components/atoms/text/MarginTopDiv";
 
 export default function ProjectForm() {
   const navigate = useNavigate();
@@ -28,14 +31,14 @@ export default function ProjectForm() {
 
   return (
     <div className="ProjectForm">
-      <h1>Create a project</h1>
+      <MainHeading>Create a project</MainHeading>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="Left FormContainer">
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Name</span>:
+              <BoldText>Name</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. Marseille Sweater"
@@ -43,11 +46,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Designer</span>:
+              <BoldText>Designer</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. PetiteKnit"
@@ -55,11 +58,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Status</span>:{" "}
+              <BoldText>Status</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. Finished, WIP, Future"
@@ -67,11 +70,11 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Description</span>:{" "}
+              <BoldText>Description</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="Project description"
@@ -79,20 +82,20 @@ export default function ProjectForm() {
             />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Size</span>:{" "}
+              <BoldText>Size</BoldText>:{" "}
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput placeholder="ex. M" register={{ ...register("size") }} />
           </div>
 
-          <div className="FormTitles">
+          <MarginTopDiv>
             <label>
-              <span className="Strong">Needles</span>:
+              <BoldText>Needles</BoldText>:
             </label>
-          </div>
+          </MarginTopDiv>
           <div className="FormInputText">
             <FormInput
               placeholder="ex. 5mm, 3mm"

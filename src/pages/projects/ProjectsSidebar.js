@@ -2,38 +2,45 @@ import SidebarLinks from "../homepage/SidebarLinks";
 import "./Projects.css";
 import YarnOne from "./yarn1.jpg";
 import AddButton from "../../components/atoms/buttons/AddButton";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import ThermaticBreak from "../../components/atoms/text/ThermaticBreak";
+import SubHeader from "../../components/atoms/text/SubHeading";
+import BoldText from "../../components/atoms/text/BoldText";
+import MarginTopDiv from "../../components/atoms/text/MarginTopDiv";
 
 export default function ProjectsSidebar() {
   return (
     <div className="Sidebar">
-      <h2>Laetitia's Projects</h2>
+      <SubHeader>Laetitia's Projects</SubHeader>
       <img src={YarnOne} alt="A shelf filled with colourful yarn" />
       <div className="SidebarPrjoectsSection">
         <div className="ProjectStatus">
-          <p className="Strong">Current WIP's:</p>
+          <BoldText>Current WIP's:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Finished projects:</p>
+          <BoldText>Finished projects:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">4</p>
+          <ParagraphText>4</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Future projects:</p>
+          <BoldText>Future projects:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="CreateProject">
-        <p className="Strong">Add a new project:</p>
-        <AddButton to="/createproject" value="Create Project" />
+        <BoldText>Add a new project:</BoldText>
+        <MarginTopDiv>
+          <AddButton to="/createproject" value="Create Project" />
+        </MarginTopDiv>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="SidebarLinksSection">
         <SidebarLinks />
       </div>
