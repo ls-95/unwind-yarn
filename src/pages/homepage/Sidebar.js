@@ -1,33 +1,37 @@
 import "./Sidebar.css";
 import YarnPhoto from "./yarn.jpg";
 import SidebarLinks from "./SidebarLinks";
+import BoldText from "../../components/atoms/text/BoldText";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import SubHeading from "../../components/atoms/text/SubHeading";
+import ThermaticBreak from "../../components/atoms/text/ThermaticBreak";
 
 export default function Sidebar() {
   return (
     <div className="Sidebar">
-      <h2>Laetitia's Journal</h2>
+      <SubHeading>Laetitia's Journal</SubHeading>
       <img src={YarnPhoto} alt="A shelf filled with colourful yarn" />
       <div className="SidebarPrjoectsSection">
         <div className="ProjectStatus">
-          <p className="Strong">Current WIP's:</p>
+          <BoldText>Current WIP's:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Finished projects:</p>
+          <BoldText>Finished projects:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">4</p>
+          <ParagraphText>4</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Future projects:</p>
+          <BoldText>Future projects:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="SidebarLinksSection">
         <SidebarLinks />
       </div>

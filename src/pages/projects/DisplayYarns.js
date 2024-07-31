@@ -1,15 +1,18 @@
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import PaddingLeft from "../../components/atoms/text/PaddingLeft";
+
 export default function DisplayYarns(props) {
   return props.results.yarn.map(function (yarns, index) {
     return (
-      <div className="DisplayYarns" key={index}>
+      <PaddingLeft key={index}>
         <p>
-          <span className="TextFont">
+          <ParagraphText>
             - {yarns.name}, {yarns.brand} {"(Colour "}
             {yarns.colorCode}
             {")"}: {yarns.quantity}
-          </span>
+          </ParagraphText>
         </p>
-      </div>
+      </PaddingLeft>
     );
   });
 }

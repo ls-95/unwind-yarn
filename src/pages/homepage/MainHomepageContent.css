@@ -1,26 +1,5 @@
-.MainHomepageContent h2 {
-  padding: 20px 0;
-}
-
-.MainHomepageContent p {
-  font-family: "Raleway", sans-serif;
-  margin-bottom: 5px;
-}
-
-.MainHomepageContent hr {
-  width: 95%;
-  margin: 40px auto;
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid white;
-}
-
 .MainHomepageContent .Contact {
   margin-top: 40px;
-}
-
-.MainHomepageContent .ContactLink {
-  margin-top: 20px;
 }
 
 .MainHomepageContent a {

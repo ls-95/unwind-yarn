@@ -36,28 +36,6 @@
   padding: 40px 0;
 }
 
-.EditProfile p {
-  margin-bottom: 20px;
-}
-
-.EditProfile a {
-  background-color: #f08080;
-  color: white;
-  border: none;
-  cursor: pointer;
-  width: 220px;
-  margin-top: 20px;
-  font-size: 14px;
-  padding: 10px 20px;
-  transition: 0.5s;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.EditProfile .Button:hover {
-  background-color: rgba(240, 128, 128, 0.7);
-}
-
 .MainProfileContent {
   display: grid;
   grid-template-columns: 1fr;
@@ -70,7 +48,6 @@
   padding: 20px 40px;
   text-align: left;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
   height: 100vh;
 }
 
@@ -81,29 +58,5 @@
 }
 
 .ProfilePageContent .ProfilePageTextContent {
-  padding: 20px 0;
-}
-
-.ProfilePageContent h1 {
-  text-align: center;
-  padding: 20px 0 40px 0;
-}
-
-.ProfilePageContent hr {
-  height: 3px;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 1px solid white;
-  margin: 10px 0;
-}
-
-.ProfilePageContent .ProfileText {
-  padding: 10px 0;
-}
-
-.TextFont {
-  font-family: "Raleway", sans-serif;
-}
-
-.Strong {
-  font-weight: bold;
+  padding-top: 40px;
 }

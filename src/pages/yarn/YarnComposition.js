@@ -1,13 +1,16 @@
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import PaddingLeft from "../../components/atoms/text/PaddingLeft";
+
 export default function YarnComposition(props) {
   return props.info.composition.map(function (material, index) {
     return (
-      <div key={index} className="YarnMaterials">
-        <p className="ProjectText">
-          <span className="TextFont">
+      <PaddingLeft key={index}>
+        <p>
+          <ParagraphText>
             - {material.pourcentage}% {material.material}
-          </span>
+          </ParagraphText>
         </p>
-      </div>
+      </PaddingLeft>
     );
   });
 }

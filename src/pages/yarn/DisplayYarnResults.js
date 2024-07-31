@@ -1,37 +1,42 @@
 import YarnComposition from "./YarnComposition";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import SubHeading from "../../components/atoms/text/SubHeading";
+import BoldText from "../../components/atoms/text/BoldText";
+import SmallHeading from "../../components/atoms/text/SmallHeading";
+import LeftText from "../../components/atoms/text/LeftText";
 
 export default function DisplayYarnResults(props) {
   return (
     <div className="DisplayYarnResults">
-      <h2>{props.information.name}</h2>
-      <h4>By {props.information.brand}</h4>
+      <SubHeading>{props.information.name}</SubHeading>
+      <SmallHeading>By {props.information.brand}</SmallHeading>
       <img src={props.information.image} alt="A soft knitting sweater" />
-      <div className="Left">
-        <p className="ProjectText">
-          <span className="Strong">Colour</span>:{" "}
-          <span className="TextFont">{props.information.color}</span>
+      <LeftText>
+        <p>
+          <BoldText>Colour</BoldText>:{" "}
+          <ParagraphText>{props.information.color}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Length</span>:{" "}
-          <span className="TextFont">{props.information.length}</span>
+        <p>
+          <BoldText>Length</BoldText>:{" "}
+          <ParagraphText>{props.information.length}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Weight</span>:{" "}
-          <span className="TextFont">{props.information.weight}</span>
+        <p>
+          <BoldText>Weight</BoldText>:{" "}
+          <ParagraphText>{props.information.weight}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Needle sizes</span>:
-          <span className="TextFont">{props.information.needleSizes}</span>
+        <p>
+          <BoldText>Needle sizes</BoldText>:
+          <ParagraphText>{props.information.needleSizes}</ParagraphText>
         </p>
-        <p className="ProjectText">
-          <span className="Strong">Quantity</span>:{" "}
-          <span className="TextFont">{props.information.quantity}</span>
+        <p>
+          <BoldText>Quantity</BoldText>:{" "}
+          <ParagraphText>{props.information.quantity}</ParagraphText>
         </p>
         <div className="Composition">
-          <span className="Strong">Composition</span>:{" "}
+          <BoldText>Composition</BoldText>:{" "}
           <YarnComposition info={props.information} />
         </div>
-      </div>
+      </LeftText>
     </div>
   );
 }

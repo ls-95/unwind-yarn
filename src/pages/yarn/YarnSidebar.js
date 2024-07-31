@@ -2,38 +2,44 @@ import SidebarLinks from "../homepage/SidebarLinks";
 import YarnStash from "./yarnstash.png";
 import AddButton from "../../components/atoms/buttons/AddButton";
 import "./Yarn.css";
+import ParagraphText from "../../components/atoms/text/ParagraphText";
+import BoldText from "../../components/atoms/text/BoldText";
+import SubHeading from "../../components/atoms/text/SubHeading";
+import ThermaticBreak from "../../components/atoms/text/ThermaticBreak";
 
 export default function ProjectsSidebar() {
   return (
     <div className="Sidebar">
-      <h2>Laetitia's Yarn Stash</h2>
+      <SubHeading>Laetitia's Yarn Stash</SubHeading>
       <img src={YarnStash} alt="A shelf filled with colourful yarn" />
       <div className="SidebarPrjoectsSection">
         <div className="ProjectStatus">
-          <p className="Strong">Yarn in stash:</p>
+          <BoldText>Yarn in stash:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">9</p>
+          <ParagraphText>9</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Yarn used:</p>
+          <BoldText>Yarn used:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
         <div className="ProjectStatus">
-          <p className="Strong">Wish list:</p>
+          <BoldText>Wish list:</BoldText>
         </div>
         <div className="ProjectStatusNumber">
-          <p className="TextFont">0</p>
+          <ParagraphText>0</ParagraphText>
         </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="AddYarn">
-        <p className="Strong">Add yarn to your stash:</p>
-        <AddButton to="/addyarn" value="Add yarn" />
+        <BoldText>Add yarn to your stash:</BoldText>
+        <div className="ButtonCreateProject">
+          <AddButton to="/addyarn" value="Add yarn" />
+        </div>
       </div>
-      <hr />
+      <ThermaticBreak />
       <div className="SidebarLinksSection">
         <SidebarLinks />
       </div>

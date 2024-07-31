@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Input from "../../../components/atoms/inputs/Input";
 import WidePinkButton from "../../../components/atoms/buttons/WidePinkButton";
 import LinkElement from "../../../components/atoms/buttons/LinkElement";
+import MainHeader from "../../../components/atoms/text/MainHeader";
 
 export default function Signup() {
   const [password, setPassword] = useState("");
@@ -49,7 +50,7 @@ export default function Signup() {
     <div className="Signup">
       <form onSubmit={handleSubmit}>
         <div className="SignupContent">
-          <h1>Signup</h1>
+          <MainHeader>Signup</MainHeader>
           <Input
             type="text"
             placeholder="First name"
